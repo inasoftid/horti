@@ -83,6 +83,36 @@ body{font-family:"Plus Jakarta Sans",sans-serif;background:var(--bg);color:var(-
 
 .leaflet-tooltip{background:rgba(8,14,26,.93) !important;border:1px solid #1c3a5c !important;border-radius:7px !important;color:#dde6f5 !important;font-family:"Plus Jakarta Sans",sans-serif !important;font-size:11px !important;font-weight:700 !important;padding:4px 10px !important;box-shadow:0 4px 18px rgba(0,0,0,.55) !important;white-space:nowrap !important}
 .leaflet-tooltip-top:before{border-top-color:#1c3a5c !important}
+
+/* ===== RESPONSIVE / MOBILE ===== */
+@media(max-width:768px){
+  .hdr{flex-direction:column;gap:6px;align-items:flex-start;padding:8px 12px}
+  .badges{align-self:flex-start}
+  .hdr-ttl{font-size:12px}
+  .hdr-sub{font-size:8px}
+
+  .main{flex-direction:column;overflow:auto}
+  #map{flex:none;height:50vh;min-height:280px;width:100%}
+
+  .panel{width:100%;flex-shrink:0;border-left:none;border-top:1px solid var(--bdr);max-height:none;overflow-y:visible}
+
+  .bot{flex-wrap:wrap;justify-content:center;text-align:center;padding:6px 10px}
+
+  /* Popup - keep usable on small screens */
+  .leaflet-popup-content-wrapper{min-width:auto !important}
+  .leaflet-popup-content{width:auto !important;max-width:90vw !important}
+
+  .dp-name{width:100px}
+  .dp-val{width:50px;font-size:11px}
+}
+
+@media(max-width:480px){
+  #map{height:45vh;min-height:240px}
+  .hdr-ttl{font-size:11px}
+  .fbtn{padding:6px 8px;font-size:11px}
+  .fbtn .fi{font-size:13px}
+  .dp-name{width:80px;font-size:11px}
+}
 </style>
 </head>
 <body>
